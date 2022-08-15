@@ -11,6 +11,9 @@
 		E734A0A728AAD5560035427F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734A0A628AAD5560035427F /* ContentView.swift */; };
 		E734A0A928AAD5570035427F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E734A0A828AAD5570035427F /* Assets.xcassets */; };
 		E734A0AC28AAD5570035427F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E734A0AB28AAD5570035427F /* Preview Assets.xcassets */; };
+		E734A0B428AADDB90035427F /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E734A0B328AADDB90035427F /* Pacifico-Regular.ttf */; };
+		E734A0B828AADEC00035427F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E734A0B728AADEC00035427F /* Launch Screen.storyboard */; };
+		E734A0BB28AAF3320035427F /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734A0BA28AAF3320035427F /* InfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,10 @@
 		E734A0A628AAD5560035427F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E734A0A828AAD5570035427F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E734A0AB28AAD5570035427F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E734A0B328AADDB90035427F /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
+		E734A0B728AADEC00035427F /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		E734A0B928AAE1FC0035427F /* MiCard-SwiftUI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MiCard-SwiftUI-Info.plist"; sourceTree = SOURCE_ROOT; };
+		E734A0BA28AAF3320035427F /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +58,12 @@
 		E734A0A328AAD5560035427F /* MiCard SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				E734A0B928AAE1FC0035427F /* MiCard-SwiftUI-Info.plist */,
+				E734A0B228AADD690035427F /* Fonts */,
 				E734A0A428AAD5560035427F /* MiCard_SwiftUIApp.swift */,
 				E734A0A628AAD5560035427F /* ContentView.swift */,
+				E734A0BA28AAF3320035427F /* InfoView.swift */,
+				E734A0B728AADEC00035427F /* Launch Screen.storyboard */,
 				E734A0A828AAD5570035427F /* Assets.xcassets */,
 				E734A0AA28AAD5570035427F /* Preview Content */,
 			);
@@ -65,6 +76,14 @@
 				E734A0AB28AAD5570035427F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E734A0B228AADD690035427F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E734A0B328AADDB90035427F /* Pacifico-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +144,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E734A0B428AADDB90035427F /* Pacifico-Regular.ttf in Resources */,
 				E734A0AC28AAD5570035427F /* Preview Assets.xcassets in Resources */,
+				E734A0B828AADEC00035427F /* Launch Screen.storyboard in Resources */,
 				E734A0A928AAD5570035427F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E734A0A728AAD5560035427F /* ContentView.swift in Sources */,
+				E734A0BB28AAF3320035427F /* InfoView.swift in Sources */,
 				E734A0A528AAD5560035427F /* MiCard_SwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,17 +284,19 @@
 		E734A0B028AAD5570035427F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MiCard SwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = ZG8HC24927;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MiCard-SwiftUI-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -291,17 +315,19 @@
 		E734A0B128AAD5570035427F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MiCard SwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = ZG8HC24927;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MiCard-SwiftUI-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
